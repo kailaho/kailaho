@@ -1,0 +1,70 @@
+
+        .full-width-image {
+            width: 100%;
+            height: auto;
+        }
+        .myButton {
+            text-align: center;
+            border-radius: 1em;
+            border: none;
+            background-color: black;
+            color: white;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        .myButtonDiv{
+            justify-content: center;
+            text-align: center;
+        }
+
+        .skill{
+            background-color: rgb(219, 218, 218);
+            color: black;
+            padding: 1em;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            border-radius: 2em;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .skill2{
+            background-color: rgb(219, 219, 219);
+            color: black;
+            padding: .75em;
+            padding-top: .25em;
+            padding-bottom: .25em;
+            border-radius: 2em;
+            font-size: .9em;
+            text-align: center;
+        }
+
+        .myButton2 {
+            background-color: black;
+            color: white;
+            padding: 1em;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            border-radius: 2em;
+        }
+
+        .linkHighlight{
+            font-weight: bold;
+        }
+
+        .green-card{
+            background-color: rgba(7, 24, 19, 0.762);
+        }
+
+        .card-columns .card {
+            transition: transform 0.3s ease; /* Smooth transition effect */
+          }
+          
+          .card-columns .card:hover {
+            transform: scale(1.05); /* Increase size on hover */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+          }
+
+        
+
