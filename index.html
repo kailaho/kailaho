@@ -57,13 +57,14 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="myButtonDiv">
-            <button class="myButton">EXPLORE PROJECTS</button>
+            <button class="myButton" onclick="scrollToProjects()">EXPLORE PROJECTS</button>
         </div>
     </div>
 </div>
 
 
-<div class="container-fluid addShadow mt-5 mb-5">
+
+<div class="container-fluid addShadow mt-5 mb-5" id="projectsSection">
     <div class="row justify-content-center">
         <div class="col-md-5 p-3">
             <h2>ShineTime</h2>
@@ -277,6 +278,22 @@
 
 <!-- Your custom JavaScript -->
 <script src="script.js"></script>
+
+<script>
+    function scrollToProjects() {
+        // Get the target element's position
+        const projectsSection = document.getElementById('projectsSection');
+        const offsetTop = projectsSection.offsetTop;
+
+        // Scroll to the target element smoothly
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+
 
 </body>
 </html>
