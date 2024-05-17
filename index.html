@@ -63,13 +63,17 @@
     }
 
     @media (min-width: 768px) {
-    .original-image {
-        display: block;
+        .original-image {
+            display: block;
+        }
+        .replacement-image {
+            display: none;
+        }
+        .marginFlex {
+            margin: 5em;
+            margin-top: 2em;
+        }
     }
-    .replacement-image {
-        display: none;
-    }
-}
 
 /* CSS to swap images on smaller screens */
 @media (max-width: 769px) {
@@ -78,6 +82,9 @@
     }
     .replacement-image {
         display: block;
+    }
+    .marginFlex {
+        margin: 0em;
     }
 }
     </style>
@@ -178,7 +185,7 @@
 
 <!-- </a> -->
 
-<div class="card-columns mx-5 justify-content-center">
+<div class="card-columns marginFlex justify-content-center">
     <a href="/matcha.html">
     <div class="card border-light p-3">
       <img class="card-img-top" src="/img/matcha.png" alt="Matcha Packaging Brand Case Study">
