@@ -51,6 +51,23 @@
     .footer a{
         color: white;
     }
+
+    .full-screenable-image {
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.9); /* Change opacity and color as needed */
+  object-fit: contain;
+}
     </style>
     
     <!-- Your custom CSS -->
@@ -141,22 +158,22 @@
 
     <div class="card-columns mt-5">
       <div class="card">
-        <img class="card-img" src="/img/nativePlants2.png" alt="shinetime1">
+        <img class="card-img full-screenable-image" src="/img/nativePlants2.png" alt="shinetime1">
       </div>
 
       <div class="card">
-        <img class="card-img" src="/img/nativePlants3.png" alt="shinetime1">
+        <img class="card-img full-screenable-image" src="/img/nativePlants3.png" alt="shinetime1">
       </div>
 
       <div class="card">
-        <img class="card-img" src="/img/nativePlants4.png" alt="shinetime1">
+        <img class="card-img full-screenable-image" src="/img/nativePlants4.png" alt="shinetime1">
       </div>
 
       <div class="card">
-        <img class="card-img" src="/img/NativePlantsI1.JPG" alt="shinetime1">
+        <img class="card-img full-screenable-image" src="/img/NativePlantsI1.JPG" alt="shinetime1">
       </div>
       <div class="card">
-        <img class="card-img" src="/img/nativePlants5.png" alt="shinetime1">
+        <img class="card-img full-screenable-image" src="/img/nativePlants5.png" alt="shinetime1">
       </div>
 
         
@@ -179,6 +196,27 @@
 
 <!-- Your custom JavaScript -->
 <script src="script.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.full-screenable-image').click(function(){
+      toggleFullScreen($(this)[0]);
+    });
+    
+    function toggleFullScreen(elem) {
+      if (!document.fullscreenElement) {
+        elem.requestFullscreen().catch(err => {
+          console.log(`Error attempting to enable full-screen mode: ${err.message}`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+  });
+</script>
+</script>
 
 </body>
 </html>

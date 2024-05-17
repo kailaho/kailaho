@@ -49,9 +49,37 @@
         text-decoration: none;
     }
 
+
     .leftShadow{
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     }
+
+    .banner{
+        transition: transform 0.3s ease;
+    }
+
+    .banner:hover{
+        transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+    .original-image {
+        display: block;
+    }
+    .replacement-image {
+        display: none;
+    }
+}
+
+/* CSS to swap images on smaller screens */
+@media (max-width: 769px) {
+    .original-image {
+        display: none;
+    }
+    .replacement-image {
+        display: block;
+    }
+}
     </style>
 
     <link href="styles.css" rel="stylesheet">    
@@ -91,13 +119,18 @@
 </div>
 
 
-<a id="stCard" href="shineTime.html">
+<!-- <a id="stCard" href="shineTime.html" >    -->
 <div class="container-fluid leftShadow stHover mt-5 mb-5" id="projectsSection">
     <div class="row justify-content-center">
         <div class="col-md-2">  
-            <img class="img-fluid" src="/img/featuredBy.png"/>
+            <div class="banner-container">
+            <a href="https://www.colorado.edu/atlas/expo2024" target="_blank">
+                <img src="/img/featuredBy.png" class="img-fluid original-image banner" alt="Original Image">
+                <img src="/img/featuredBy2.png" class="img-fluid replacement-image" alt="Replacement Image">
+            </div>
         </div>
         <div class="col-md-4 mt-3">
+            <a href="shineTime.html" id="stCard">
             <h2>ShineTime</h2>
             <p class="lead">ShineTime is a tool for families of children with ADHD designed to help parents guide their children through better understanding
                 time management and task accomplishment in a visual and engaging manner.
@@ -125,21 +158,25 @@
                     </div>
                 </div>
             </div>
-
+            </a>
             <!-- <div class="row justify-content-center">
                 <a href="/shineTime.html"><button class="myButton">See More</button></a>
             </div> -->
             
         </div>
         <div class="col-md-5 p-3">
+            <a href="shineTime.html">
             <video width="100%" height="auto" style="border-radius: .5em" autoplay muted loop>
                 <source src="/img/STVideo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            </a>
         </div>        
     </div>
+
 </div>
-</a>
+
+<!-- </a> -->
 
 <div class="card-columns mx-5 justify-content-center">
     <a href="/matcha.html">
