@@ -33,6 +33,25 @@
     .footer a{
         color: white;
     }
+
+    .stHover{
+        transition: transform 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Smooth transition effect */
+      margin: 1.5em;
+    }
+
+    .stHover:hover{
+        transform: scale(1.05); /* Increase size on hover */
+      box-shadow: 0 0 20px rgba(109, 128, 123, 0.837); /* Add a subtle box shadow */
+    }
+
+    #stCard {
+        text-decoration: none;
+    }
+
+    .leftShadow{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
     </style>
 
     <link href="styles.css" rel="stylesheet">    
@@ -72,10 +91,13 @@
 </div>
 
 
-
-<div class="container-fluid addShadow mt-5 mb-5" id="projectsSection">
+<a id="stCard" href="shineTime.html">
+<div class="container-fluid leftShadow stHover mt-5 mb-5" id="projectsSection">
     <div class="row justify-content-center">
-        <div class="col-md-5 p-3">
+        <div class="col-md-2">  
+            <img class="img-fluid" src="/img/featuredBy.png"/>
+        </div>
+        <div class="col-md-4 mt-3">
             <h2>ShineTime</h2>
             <p class="lead">ShineTime is a tool for families of children with ADHD designed to help parents guide their children through better understanding
                 time management and task accomplishment in a visual and engaging manner.
@@ -95,14 +117,18 @@
                     </div>
 
                     <div class="col-auto">
+                        <p class="skill">Web Bluetooth API</p>
+                    </div>
+
+                    <div class="col-auto">
                         <p class="skill">User Research</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-center">
+            <!-- <div class="row justify-content-center">
                 <a href="/shineTime.html"><button class="myButton">See More</button></a>
-            </div>
+            </div> -->
             
         </div>
         <div class="col-md-5 p-3">
@@ -113,7 +139,7 @@
         </div>        
     </div>
 </div>
-
+</a>
 
 <div class="card-columns mx-5 justify-content-center">
     <a href="/matcha.html">
